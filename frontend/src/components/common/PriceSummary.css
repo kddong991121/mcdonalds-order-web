@@ -1,0 +1,34 @@
+.price-summary {
+  padding: 28px 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.price-summary h2 {
+  margin: 0 0 24px;
+  font-size: 28px;
+}
+
+.price-summary__rows {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+}
+
+.price-summary__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.price-summary__row dt,
+.price-summary__row dd {
+  margin: 0;
+}
+
+.price-summary__row--total {
+  margin-top: 8px;
+  padding-top: 22px;
+  border-top: 1px solid var(--color-border);
+  font-size: 25px;
+  font-weight: 800;
+}

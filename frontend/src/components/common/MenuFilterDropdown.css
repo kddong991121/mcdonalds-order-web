@@ -1,0 +1,74 @@
+.menu-filter-dropdown {
+  position: relative;
+  display: grid;
+  flex: 0 0 190px;
+  gap: 6px;
+  width: 190px;
+  color: var(--color-muted);
+  font-size: .8rem;
+  font-weight: 700;
+}
+
+.menu-filter-dropdown__trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  min-height: 44px;
+  padding: 0 13px;
+  color: var(--color-text);
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  font: inherit;
+  font-size: .95rem;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.menu-filter-dropdown__trigger:hover { border-color: #aaa; }
+.menu-filter-dropdown__trigger:focus-visible { outline: none; border-color: var(--color-mcdonalds-yellow); box-shadow: 0 0 0 3px rgb(255 188 13 / 26%); }
+.menu-filter-dropdown__chevron { width: 18px; height: 18px; fill: none; stroke: currentcolor; stroke-width: 1.8; transition: transform 180ms ease; }
+.menu-filter-dropdown__trigger[aria-expanded='true'] .menu-filter-dropdown__chevron { transform: rotate(180deg); }
+
+.menu-filter-dropdown__options {
+  position: absolute;
+  top: calc(100% + 7px);
+  right: 0;
+  left: 0;
+  z-index: 20;
+  display: grid;
+  gap: 3px;
+  margin: 0;
+  padding: 6px;
+  color: var(--color-text);
+  background: #fff;
+  border: 1px solid #dedede;
+  border-radius: 12px;
+  box-shadow: 0 7px 18px rgb(0 0 0 / 10%);
+  list-style: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-4px);
+  pointer-events: none;
+  transition: opacity 170ms ease, transform 170ms ease, visibility 0s linear 170ms;
+}
+
+.menu-filter-dropdown__options.is-open { visibility: visible; opacity: 1; transform: translateY(0); pointer-events: auto; transition-delay: 0s; }
+.menu-filter-dropdown__options li { display: grid; grid-template-columns: 18px 1fr; align-items: center; min-height: 40px; padding: 8px 10px; border-radius: 8px; color: #222; font-size: .92rem; cursor: pointer; }
+.menu-filter-dropdown__options li:hover,
+.menu-filter-dropdown__options li.is-highlighted { background: #fff8e1; }
+.menu-filter-dropdown__options li.is-selected { background: #fff4cc; font-weight: 800; }
+.menu-filter-dropdown__options li.is-selected.is-highlighted { background: #ffefb5; }
+
+@media (max-width: 720px) {
+  .menu-filter-dropdown { flex-basis: auto; width: min(100%, 280px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-filter-dropdown__trigger,
+  .menu-filter-dropdown__chevron,
+  .menu-filter-dropdown__options { transition-duration: 1ms; }
+}

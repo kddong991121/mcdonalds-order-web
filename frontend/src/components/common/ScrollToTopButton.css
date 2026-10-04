@@ -1,0 +1,53 @@
+.scroll-to-top-button {
+  position: fixed;
+  right: 30px;
+  bottom: calc(30px + env(safe-area-inset-bottom));
+  z-index: 80;
+  display: grid;
+  width: 54px;
+  height: 54px;
+  padding: 0;
+  place-items: center;
+  color: #fff;
+  background: #292929;
+  border: 1px solid #292929;
+  border-radius: 50%;
+  box-shadow: 0 5px 16px rgb(0 0 0 / 24%);
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  cursor: pointer;
+  transition: opacity 200ms ease, transform 200ms ease, background-color 160ms ease;
+}
+
+.scroll-to-top-button svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentcolor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.scroll-to-top-button.is-visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.scroll-to-top-button:hover { background: #111; }
+.scroll-to-top-button:focus-visible { outline: none; box-shadow: 0 0 0 3px rgb(255 188 13 / 38%), 0 5px 16px rgb(0 0 0 / 24%); }
+.scroll-to-top-button--detail { bottom: calc(112px + env(safe-area-inset-bottom)); }
+.scroll-to-top-button--cta-visible { bottom: calc(var(--cta-clearance) + env(safe-area-inset-bottom)); }
+
+@media (max-width: 680px) {
+  .scroll-to-top-button {
+    right: 18px;
+    bottom: calc(22px + env(safe-area-inset-bottom));
+    width: 50px;
+    height: 50px;
+  }
+
+  .scroll-to-top-button--detail { bottom: calc(104px + env(safe-area-inset-bottom)); }
+  .scroll-to-top-button--cta-visible { bottom: calc(var(--cta-clearance) + env(safe-area-inset-bottom)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-to-top-button { transition-duration: 1ms; }
+}

@@ -1,0 +1,18 @@
+.drink-selector { min-width: 0; margin: 0; padding: 0; border: 0; }
+.drink-selector > legend { width: 100%; margin-bottom: 22px; font-size: clamp(24px, 3vw, 38px); font-weight: 700; }
+.drink-selector__current { margin-bottom: 24px; padding: 8px; background: #fff8e4; border: 1px solid #f0d181; border-radius: 12px; }
+.drink-selector__group + .drink-selector__group { margin-top: 28px; }
+.drink-selector__group h2 { margin: 0; padding: 0 0 12px; border-bottom: 2px solid var(--color-mcdonalds-yellow); font-size: 1.2rem; }
+.drink-selector__group > div { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.drink-option { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) 30px; align-items: center; gap: 14px; min-height: 84px; padding: 15px 18px; background: var(--color-white); border: 1px solid var(--color-border); cursor: pointer; }
+.drink-selector__group .drink-option:nth-child(odd) { border-right: 1px solid #e2e2e2; }
+.drink-option input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.drink-option:hover { position: relative; z-index: 1; border-color: var(--color-mcdonalds-yellow); background: var(--color-mcdonalds-yellow-soft); }
+.drink-option.is-selected { position: relative; z-index: 2; background: #fffaf0; border: 2px solid var(--color-mcdonalds-yellow); }
+.drink-option:focus-within { position: relative; z-index: 3; outline: none; box-shadow: inset 0 0 0 2px var(--color-mcdonalds-yellow), 0 0 0 3px var(--color-focus-ring); }
+.drink-option > span:first-of-type { display: grid; gap: 5px; }
+.drink-option small { color: var(--color-muted); }
+.drink-option em { color: #7a5a00; font-size: .8rem; font-style: normal; font-weight: 700; }
+.drink-option__check { display: grid; width: 28px; height: 28px; place-items: center; border: 1px solid #c99300; border-radius: 50%; background: var(--color-mcdonalds-yellow); font-weight: 800; opacity: 0; }
+.drink-option.is-selected .drink-option__check { opacity: 1; }
+@media (max-width: 620px) { .drink-selector__group > div { grid-template-columns: 1fr; } .drink-selector__group .drink-option:nth-child(odd) { border-right: 0; } }

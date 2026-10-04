@@ -1,0 +1,39 @@
+.order-type-switch {
+  display: inline-grid;
+  grid-template-columns: repeat(2, auto);
+  flex: 0 0 auto;
+  padding: 3px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background: var(--color-surface-muted);
+}
+
+.order-type-switch button {
+  min-height: 38px;
+  padding: 0 15px;
+  color: var(--color-text);
+  background: transparent;
+  border: 0;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.order-type-switch button.is-selected {
+  background: var(--color-mcdonalds-yellow);
+  box-shadow: 0 1px 4px rgb(0 0 0 / 14%);
+}
+
+.order-type-switch button:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+@media (max-width: 480px) {
+  .order-type-switch button {
+    min-height: 36px;
+    padding: 0 10px;
+    font-size: 0.82rem;
+  }
+}

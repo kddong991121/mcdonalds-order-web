@@ -1,0 +1,20 @@
+.flow-page { width: min(100% - 40px, 980px); margin: 0 auto; padding: 42px 0 96px; }
+.product-detail-top { scroll-margin-top: var(--header-scroll-offset); }
+.flow-page__back { width: fit-content; margin-bottom: 12px; padding-inline: 14px; }
+.flow-page__eyebrow { margin: 0 0 8px; color: var(--color-mcdonalds-red); font-weight: 800; }
+.product-page__intro { display: grid; grid-template-columns: 1.15fr .85fr; gap: 64px; align-items: center; margin: 34px 0 52px; }
+.product-page__intro h1 { margin: 0; font-size: clamp(2.1rem, 5vw, 3.8rem); line-height: 1.1; }
+.product-page__intro p:not(.flow-page__eyebrow) { margin: 18px 0 0; color: var(--color-muted); line-height: 1.7; }
+.product-page__intro strong { display: block; margin-top: 24px; font-size: 1.5rem; }
+.product-page__visual { width: 100%; max-height: 360px; aspect-ratio: 1.2; object-fit: contain; }
+.product-page__availability { margin: -20px 0 36px; padding: 18px 20px; color: #65130e; background: #fff5f4; border-left: 4px solid var(--color-mcdonalds-red); line-height: 1.6; }
+.product-page__form { display: grid; gap: 28px; }
+.ingredient-editor, .product-page__quantity { padding: 26px; border: 1px solid var(--color-border); border-radius: var(--radius-medium); }
+.ingredient-editor > div, .product-page__quantity { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+.ingredient-editor h2, .product-page__quantity h2 { margin: 0; font-size: 1.25rem; }
+.ingredient-editor__row { display: grid; grid-template-columns: 1fr 160px; align-items: center; gap: 20px; padding: 16px 0; border-bottom: 1px solid var(--color-border-light); }
+.ingredient-editor__row:last-child { border: 0; padding-bottom: 0; }
+.product-page__quantity p { margin: 6px 0 0; color: var(--color-muted); font-size: .9rem; }
+.flow-page__actions { position: sticky; bottom: 0; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 36px; padding: 18px 0; background: rgb(255 255 255 / 94%); backdrop-filter: blur(8px); }
+.flow-page__error { padding: 14px; border-left: 4px solid var(--color-mcdonalds-red); color: #8b1711; background: #fff2f1; }
+@media (max-width: 680px) { .flow-page { padding-top: 24px; } .flow-page__back { margin-bottom: 8px; padding: 6px 11px; } .product-page__intro { grid-template-columns: 1fr; gap: 30px; margin-top: 18px; } .product-page__visual { grid-row: 1; max-height: 280px; } .product-page__availability { margin-top: -18px; } .ingredient-editor__row { grid-template-columns: 1fr 120px; } .flow-page__actions { grid-template-columns: 1fr; } }

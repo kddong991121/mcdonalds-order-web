@@ -1,0 +1,36 @@
+.quantity-input {
+  display: inline-grid;
+  grid-template-columns: 52px 58px 52px;
+  align-items: center;
+  text-align: center;
+}
+
+.quantity-input button {
+  width: 52px;
+  height: 52px;
+  padding: 0;
+  color: var(--color-text);
+  background: #fff;
+  border: 1px solid #777;
+  border-radius: 50%;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.quantity-input button:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+.quantity-input button:disabled {
+  color: #aaa;
+  border-color: #ddd;
+  cursor: not-allowed;
+}
+
+.quantity-input output {
+  font-size: 22px;
+  font-weight: 700;
+}

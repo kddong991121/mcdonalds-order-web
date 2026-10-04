@@ -1,0 +1,38 @@
+.secondary-action-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 6px 12px;
+  color: #292929;
+  background: #fff;
+  border: 1px solid #b7b7b7;
+  border-radius: 8px;
+  font: inherit;
+  font-size: .88rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.secondary-action-button:hover:not(:disabled) {
+  background: #fff8e1;
+  border-color: var(--color-mcdonalds-yellow);
+}
+
+.secondary-action-button:focus-visible {
+  outline: none;
+  border-color: var(--color-mcdonalds-yellow);
+  box-shadow: 0 0 0 3px rgb(255 188 13 / 28%);
+}
+
+.secondary-action-button--danger { color: #8b1711; }
+.secondary-action-button--danger:hover:not(:disabled) { background: #fff2f1; border-color: #d98782; }
+.secondary-action-button:disabled { color: #a8a8a8; background: #f5f5f5; cursor: not-allowed; }
+
+@media (prefers-reduced-motion: reduce) {
+  .secondary-action-button { transition-duration: 1ms; }
+}

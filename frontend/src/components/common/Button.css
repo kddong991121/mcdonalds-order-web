@@ -1,0 +1,68 @@
+.common-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 150ms ease, border-color 150ms ease,
+    color 150ms ease;
+}
+
+.common-button:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+.common-button:disabled {
+  color: #777;
+  background: #f8e3a6;
+  border-color: #e1ca87;
+  cursor: not-allowed;
+}
+
+.common-button--primary:not(:disabled) {
+  color: var(--color-text);
+  background: var(--color-mcdonalds-yellow);
+  border-color: #dda400;
+}
+
+.common-button--primary:not(:disabled):hover {
+  background: #f2ad00;
+}
+
+.common-button--secondary:not(:disabled) {
+  color: var(--color-text);
+  background: #fff;
+  border-color: #777;
+}
+
+.common-button--secondary:not(:disabled):hover {
+  background: var(--color-surface-muted);
+  border-color: var(--color-text);
+}
+
+.common-button--small {
+  min-height: 40px;
+  padding: 0 20px;
+  font-size: 14px;
+}
+
+.common-button--medium {
+  min-height: 48px;
+  padding: 0 28px;
+  font-size: 16px;
+}
+
+.common-button--large {
+  min-height: 58px;
+  padding: 0 36px;
+  font-size: 18px;
+}
+
+.common-button--full {
+  width: 100%;
+}

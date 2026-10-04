@@ -1,0 +1,112 @@
+.option-selector {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.option-selector legend {
+  width: 100%;
+  margin-bottom: 22px;
+  font-size: clamp(24px, 3vw, 38px);
+  font-weight: 700;
+}
+
+.option-selector__list {
+  display: grid;
+  gap: 10px;
+}
+
+.option-selector__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr) 34px;
+  align-items: center;
+  gap: 24px;
+  min-height: 132px;
+  padding: 18px 22px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.option-selector__item:hover {
+  border-color: var(--color-mcdonalds-yellow);
+  background: var(--color-mcdonalds-yellow-soft);
+}
+
+.option-selector__item.is-selected {
+  padding: 17px 21px;
+  background: #fffaf0;
+  border: 2px solid var(--color-mcdonalds-yellow);
+}
+
+.option-selector__item input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.option-selector__item.has-no-image {
+  grid-template-columns: minmax(0, 1fr) 34px;
+}
+
+.option-selector__item:focus-within {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color-focus-ring);
+}
+
+.option-selector__image {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+}
+
+.option-selector__text {
+  display: grid;
+  gap: 8px;
+  font-size: 18px;
+}
+
+.option-selector__text small {
+  color: var(--color-muted);
+  font-size: 15px;
+}
+
+.option-selector__check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  color: var(--color-text);
+  background: var(--color-mcdonalds-yellow);
+  border: 1px solid #c99300;
+  border-radius: 50%;
+  font-weight: 700;
+  opacity: 0;
+}
+
+.option-selector__item.is-selected .option-selector__check {
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .option-selector__item {
+    grid-template-columns: 72px minmax(0, 1fr) 30px;
+    gap: 16px;
+    min-height: 112px;
+    padding: 14px 8px;
+  }
+
+  .option-selector__image {
+    width: 72px;
+    height: 72px;
+  }
+
+  .option-selector__text {
+    font-size: 16px;
+  }
+}
